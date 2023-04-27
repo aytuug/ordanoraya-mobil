@@ -11,35 +11,27 @@ import { selectOrigin } from '../slices/navSlice'
 const data = [
   {
     id: '1',
-    title: 'En ucuz nasıl giderim?',
-    image:
-      'https://media.istockphoto.com/id/1205644395/tr/vekt%C3%B6r/yarat%C4%B1c%C4%B1-yol-yolculuk-logosu-tasar%C4%B1m-i%C5%9Fareti-vekt%C3%B6r-konsept-tasar%C4%B1m-grafik.jpg?s=170667a&w=0&k=20&c=I_vkuyyUz3VA9zcKMocH01TP_gY0HdqIAf3AHLxT-Zg=',
-    screen: 'MapScreen',
+    screen: 'RideOptionsCard',
   },
 ]
-
-const NavOptions = () => {
+const NavOptions = ({ style }) => {
   const navigation = useNavigation()
   const origin = useSelector(selectOrigin)
   return (
     <FlatList
+      contentContainerStyle={{ flexGrow: 1, justifyContent: 'center' }}
       data={data}
-      horizontal
       keyExtractor={(item) => item.id}
+      horizontal
       renderItem={({ item }) => (
         <TouchableOpacity
           onPress={() => navigation.navigate(item.screen)}
-          style={tw`p-2 pl-6 pb-8 pt-4 bg-gray-50 m-2 w-40 `}
+          style={tw`items-center p-2 pl-6 pb-8 pt-10  m-10 w-20 `}
           disabled={!origin}
         >
-          <View style={tw`${!origin && 'opacity-20'}`}>
-            <Image
-              style={{ width: 120, height: 120, resizeMode: 'contain' }}
-              source={{ uri: item.image }}
-            />
-            <Text style={tw`mt-2 text-lg font-semibold `}>{item.title}</Text>
+          <View style={tw`p-2	${!origin && 'opacity-20'}`}>
             <Icon
-              style={tw`p-2 bg-yellow-500	rounded-full w-10 mt-4`}
+              style={tw`p-2 bg-yellow-500	rounded-full w-10 mt-5`}
               name='arrowright'
               color='white'
               type='antdesign'

@@ -3,10 +3,10 @@ import { KeyboardAvoidingView } from 'react-native'
 import { Provider } from 'react-redux'
 import { store } from './store'
 import HomeScreen from './screens/HomeScreen'
-import MapScreen from './screens/MapScreen'
 import { SafeAreaProvider } from 'react-native-safe-area-context'
 import { NavigationContainer } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
+import RideOptionsCard from './components/RideOptionsCard'
 
 export default function App() {
   const Stack = createNativeStackNavigator()
@@ -28,8 +28,8 @@ export default function App() {
                 }}
               />
               <Stack.Screen
-                name='MapScreen'
-                component={MapScreen}
+                name='RideOptionsCard'
+                component={RideOptionsCard}
                 options={{
                   headerShown: false,
                 }}

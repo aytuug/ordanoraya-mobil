@@ -31,7 +31,6 @@ const NavigateCard = () => {
                   description: data.description,
                 })
               )
-
               navigation.navigate('RideOptionsCard')
             }}
             enablePoweredByContainer={false}
@@ -43,7 +42,6 @@ const NavigateCard = () => {
             debounce={400}
           />
         </View>
-        <NavExtra />
       </View>
     </SafeAreaView>
   )
