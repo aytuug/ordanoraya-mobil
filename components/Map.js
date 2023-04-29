@@ -32,7 +32,8 @@ const Map = () => {
       )
         .then((res) => res.json())
         .then((data) => {
-          console.log(data)
+          console.log(data.destination_addresses[0])
+          console.log(data.origin_addresses[0])
           dispatch(setTravelTimeInformation(data.rows[0].elements[0]))
         })
     }

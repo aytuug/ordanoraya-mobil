@@ -1,14 +1,14 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
-const CarHolidayScreen = () => {
+const HolidayScreen = () => {
   return (
     <View>
-      <Text>CarHolidayScreen</Text>
+      <Text>HolidayScreen</Text>
     </View>
   )
 }
 
-export default CarHolidayScreen
+export default HolidayScreen
 
 const styles = StyleSheet.create({})

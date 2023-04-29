@@ -19,7 +19,7 @@ const data = [
     multiplier: 1,
     image:
       'https://img.myloview.com/stickers/point-car-logo-vector-template-creative-car-logo-design-concepts-400-262465031.jpg',
-    screen: 'CarHolidayCard',
+    screen: 'HolidayScreen',
   },
   {
     id: '2',
@@ -27,7 +27,7 @@ const data = [
     multiplier: 1,
     image:
       'https://i.pinimg.com/originals/67/0e/90/670e9047a075265da2f63b318c09e914.png',
-    screen: 'BusHolidayCard',
+    screen: 'HolidayScreen',
   },
   {
     id: '3',
@@ -35,7 +35,7 @@ const data = [
     multiplier: 1.75,
     image:
       'https://static.vecteezy.com/system/resources/previews/008/625/151/original/plane-icon-logo-design-template-vector.jpg',
-    screen: 'PlaneHolidayCard',
+    screen: 'HolidayScreen',
   },
 ]
 
@@ -97,10 +97,10 @@ const RideOptionsCard = () => {
         <TouchableOpacity
           onPress={
             selected?.title == 'Araba'
-              ? () => navigation.navigate('CarHolidayScreen')
+              ? () => navigation.navigate('HolidayScreen')
               : selected?.title == 'Otobüs'
-              ? () => navigation.navigate('BusHolidayScreen')
-              : () => navigation.navigate('PlaneHolidayScreen')
+              ? () => navigation.navigate('HolidayScreen')
+              : () => navigation.navigate('HolidayScreen')
           }
           disabled={!selected}
           style={tw`bg-yellow-600 py-3 m-3 ${!selected && 'bg-blue-600'}`}
