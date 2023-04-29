@@ -7,6 +7,9 @@ import { SafeAreaProvider } from 'react-native-safe-area-context'
 import { NavigationContainer } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import RideOptionsCard from './components/RideOptionsCard'
+import CarHolidayScreen from './screens/CarHolidayScreen'
+import BusHolidayScreen from './screens/BusHolidayScreen'
+import PlaneHolidayScreen from './screens/PlaneHolidayScreen'
 
 export default function App() {
   const Stack = createNativeStackNavigator()
@@ -30,6 +33,27 @@ export default function App() {
               <Stack.Screen
                 name='RideOptionsCard'
                 component={RideOptionsCard}
+                options={{
+                  headerShown: false,
+                }}
+              />
+              <Stack.Screen
+                name='CarHolidayScreen'
+                component={CarHolidayScreen}
+                options={{
+                  headerShown: false,
+                }}
+              />
+              <Stack.Screen
+                name='BusHolidayScreen'
+                component={BusHolidayScreen}
+                options={{
+                  headerShown: false,
+                }}
+              />
+              <Stack.Screen
+                name='PlaneHolidayScreen'
+                component={PlaneHolidayScreen}
                 options={{
                   headerShown: false,
                 }}
